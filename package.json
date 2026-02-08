@@ -1,0 +1,48 @@
+{
+  "name": "@uverify/asymmetric-nfc",
+  "version": "0.1.0",
+  "description": "A library for verifying asymmetric signatures using Web NFC.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "web-nfc",
+    "typescript",
+    "nfc",
+    "eddsa",
+    "asymmetric",
+    "signature"
+  ],
+  "author": "Fabian Bormann",
+  "license": "APACHE-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UVerify-io/asymmetric-nfc.git"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "react": "^18.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.0.0"
+  }
+}
